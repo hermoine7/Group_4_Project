@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+    <title>Sleepify-Main</title>
+    <style>
+        .pet-option {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: #D2E2E8;">
+    <center><img src="../assets/Sleepify.png" style="width: 150px; height: auto; margin-top: 20px;"/></center>
+    <img src="../assets/Back.png" style="position: absolute; top: 0; left: 0; width: 90px; height: auto; cursor: pointer; margin-top: 50px; margin-left: 30px;" onclick="window.location.href='../screens/main.html'">
+    <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="../assets/user.png" style="position: absolute; top: 0; right: 0; width: 50px; height: auto; cursor: pointer; margin-top: 64px; margin-right: 30px;">
+    </div>
+
+    <h3 style="color: #495B70; margin-top: 40px; font-size: 40px; font-weight: bold; margin-left: 70px;">POINTS EARNT</h3>
+    <div style="display: flex; justify-content: space-between; width:95%; margin-top:-60px; padding: 80px;">
+        <div style="border-width: 2px; width: 48%; border-color: #434344; border-style: solid; border-radius: 10%; height: auto;">
+            <center>
+                <h3 style="color:#434344; margin-top: 40px; font-size: 150px; font-weight: bold;">100</h3>
+            </center>
+        </div>
+        <div style="border-width: 2px; width: 48%; border-color: #434344; border-style: solid; border-radius: 10%; height: auto;">
+            <center>
+                <img id="large-pet-image" src="../assets/dog/IMG_0530.PNG" style="margin-top: -40px;">
+            </center>
+        </div>
+    </div>
+    
+    <img src="../assets/pet.png" id="pet-icon" style="position: absolute; top: 0; right: 0; width: 60px; height: auto; cursor: pointer; margin-top: 530px; margin-right: 170px;" data-bs-toggle="modal" data-bs-target="#petModal">
+
+    <h3 style="color: #495B70; margin-top: -30px; font-size: 40px; font-weight: bold; margin-left: 70px;">SUMMARY</h3>
+    <center>
+        <div style="border-width: 2px; width: 80%; border-color: #434344; border-style: solid; border-radius: 8%; height: auto; padding-left: 50px; text-align: left; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;">
+            <p style="font-size: 25px;"><b>Average screen time per day:</b> 4 hours 41 minutes</p>
+            <p style="font-size: 25px;"><b>Average steps per day:</b> 8500 steps</p>
+            <p style="font-size: 25px;"><b>Average nutrition requirements met per day:</b> 90%</p>
+            <br>
+            <center><p style="font-size: 25px;"><b>Average sleep per day:</b>6.5 hours per day</p></center>
+
+        </div>
+    </center>
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" style="background-color: #FDF2E8; margin-left:400px">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Profile</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><b>Username:</b> Shraavya Shankar</p>
+              <p><b>Email:</b> shravya@gmail.com</p>
+              <p><b>Points:</b> 100</p>
+            </div>
+            <div class="modal-footer" style="align-items: center; justify-content: center;">
+              <button type="button" class="btn btn-secondary"  style="background-color: #495B70; width: 45%;" onclick="window.location.href='../index.html'">Log out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- New Modal for Pet Image Selection -->
+    <div class="modal fade" id="petModal" tabindex="-1" aria-labelledby="petModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" style="background-color: #FDF2E8;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="petModalLabel">Select Your Pet</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-4">
+                    <img src="../assets/pets/pet1.png" class="img-fluid pet-option" alt="Pet 1">
+                  </div>
+                  <div class="col-4">
+                    <img src="../assets/pets/pet2.png" class="img-fluid pet-option" alt="Pet 2">
+                  </div>
+                  <div class="col-4">
+                    <img src="../assets/pets/pet3.png" class="img-fluid pet-option" alt="Pet 3">
+                  </div>
+                  <div class="col-4">
+                    <img src="../assets/pets/pet4.png" class="img-fluid pet-option" alt="Pet 4">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const largePetImage = document.getElementById('large-pet-image');
+            const petOptions = document.querySelectorAll('.pet-option');
+
+            petOptions.forEach((option, index) => {
+                option.addEventListener('click', () => {
+                    largePetImage.src = `../assets/pets/pet${index + 1}.png`;
+                    const petModal = bootstrap.Modal.getInstance(document.getElementById('petModal'));
+                    petModal.hide();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
